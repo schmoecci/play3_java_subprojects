@@ -1,0 +1,6 @@
+GET        /index                        controllers.admin.AdminController.index()
+
+GET        /assets/*file                 controllers.admin.Assets.at(path="/public/lib/admin", file)
+GET        /assetsVersioned/*file        controllers.admin.Assets.versioned(path="/public/lib/admin", file: Asset)
+
+->         /                             common.Routes

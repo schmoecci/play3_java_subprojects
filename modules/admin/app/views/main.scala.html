@@ -1,0 +1,18 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@controllers.common.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@controllers.common.routes.Assets.at("images/favicon.png")">
+    </head>
+    <body>
+        @* And here's where we render the `Html` object containing
+         * the page content. *@
+        @content
+
+        <script src="@controllers.common.routes.Assets.at("javascripts/main.js")" type="text/javascript"></script>
+    </body>
+</html>
